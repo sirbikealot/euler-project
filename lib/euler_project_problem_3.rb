@@ -10,27 +10,27 @@ What is the largest prime factor of the number 600851475143 ?
 
 class PrimeFactorGenerator # cannot make it a child class of Integer explicity because Numerics don't have ::new method
 	
-	def initialize(num)
-		@num = num
-		@test_factor = 2
-		@factor_product = 1 # Will multiply prime factors together until product is original number
-	end
+  def initialize(num)
+    @num = num
+    @test_factor = 2
+    @factor_product = 1 # Will multiply prime factors together until product is original number
+  end
 
-	def greatest_prime_factor(number = @num)
-		until @factor_product == @num # Switching to factor_product test cut runtime down for large numbers
-			if number % @test_factor == 0 # is it a factor?
-				@factor_product *= @test_factor # product of all prime factors found so far
-				number = number / @test_factor # Next iteration will seek prime factors of remaining quotient. Need this or blows up
-			else
-				@test_factor += 1 # Next iteration will test new factor
-			end
-		end
-		@test_factor # last factor identified is largest prime factor
-	end
+  def greatest_prime_factor(number = @num)
+    until @factor_product == @num # Switching to factor_product test cut runtime down for large numbers
+      if number % @test_factor == 0 # is it a factor?
+        @factor_product *= @test_factor # product of all prime factors found so far
+        number = number / @test_factor # Next iteration will seek prime factors of remaining quotient. Need this or blows up
+      else
+        @test_factor += 1 # Next iteration will test new factor
+      end
+    end
+    @test_factor # last factor identified is largest prime factor
+  end
 
-	def to_s
-		@num
-	end
+  def to_s
+    @num
+  end
 	
 end
 

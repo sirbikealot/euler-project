@@ -12,34 +12,34 @@ By considering the terms in the Fibonacci sequence whose values do not exceed fo
 
 class FibonacciSeries
 
-	def initialize(max)
-		@max = max.to_i
-		@set = []
-		puts "Initializing a Fibonacci Series to #{@max}"
-	end
+  def initialize(max)
+    @max = max.to_i
+    @set = []
+    puts "Initializing a Fibonacci Series to #{@max}"
+  end
 
-	def sum # test method to track value of y at each iteration
-		x,y = 1,2
-		sum = x + y
-		while y < @max
-			x,y = y, x + y
-			sum += y unless y > @max # otw loop will execute once more and make y > 100
-			puts "x = #{x}; y = #{y}"
-		end
-		puts "Sum of Fibonacci numbers to #{@max} is #{sum}"
-		sum
-	end
+  def sum # test method to track value of y at each iteration
+    x,y = 1,2
+    sum = x + y
+    while y < @max
+      x,y = y, x + y
+      sum += y unless y > @max # otw loop will execute once more and make y > 100
+      puts "x = #{x}; y = #{y}"
+    end
+    puts "Sum of Fibonacci numbers to #{@max} is #{sum}"
+    sum
+  end
 
-	def sum_evens
-		x , y = 1 , 2
-		sum = 2
-		while y < @max
-			x,y = y, x + y
-			sum += y if y < @max && y.even?
-		end
-		puts "Sum of even Fibonacci numbers to #{@max} is #{sum}"
-		sum
-	end
+  def sum_evens
+  x , y = 1 , 2
+  sum = 2
+  while y < @max
+    x,y = y, x + y
+    sum += y if y < @max && y.even?
+  end
+  puts "Sum of even Fibonacci numbers to #{@max} is #{sum}"
+  sum
+  end
 
 end
 		

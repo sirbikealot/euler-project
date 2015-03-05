@@ -8,7 +8,6 @@ require 'minitest/autorun'
 require 'euler_project_problem_3'
 
 class TestEulerProblem3 < Minitest::Unit::TestCase # MiniTest v4
-	
 	# should inherit from Minitest::Test for MiniTest 5
 
 	def setup
@@ -33,7 +32,7 @@ class TestEulerProblem3 < Minitest::Unit::TestCase # MiniTest v4
 	def test_greatest_prime_factor_of_1_000_000_000
 		assert_equal 5 , @g3.greatest_prime_factor(1_000_000_000)
 	end
-	
+
 end
 
 # Finished tests in 0.000891s, 4489.3378 tests/s, 4489.3378 assertions/s.
