@@ -1,6 +1,5 @@
 # test_project_euler_problem_3.rb
 
-# $ cd ~/Documents/Career/Coding_Practice/euler_project
 # ruby -I lib test/test_project_euler_problem_3.rb
 
 require 'minitest/spec'
