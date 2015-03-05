@@ -17,12 +17,12 @@ while b >= b_low
 	a = a_high # reset a loop
 	while a >= a_low
 		candidate = a * b
-		# puts "a: #{a} , b: #{b} => a * b = #{candidate}"
 		palindromes["#{a} * #{b}"] = candidate if candidate.to_s == candidate.to_s.reverse	
 		a -= 1
 	end
 	b -= 1
 end
+
 puts "Largest palindromic number that is product of two 3-digit numbers:"
 puts palindromes.sort_by {|_, product| product}.last
 # => 913 * 993
