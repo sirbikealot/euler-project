@@ -29,7 +29,7 @@ class FibonacciSeries
 		puts "Sum of Fibonacci numbers to #{@max} is #{sum}"
 		sum
 	end
-	
+
 	def sum_evens
 		x , y = 1 , 2
 		sum = 2
@@ -40,16 +40,11 @@ class FibonacciSeries
 		puts "Sum of even Fibonacci numbers to #{@max} is #{sum}"
 		sum
 	end
-	
+
 end
 		
-=begin
-f_100 = FibonacciSeries.new(100)
-f_100.sum_evens
-# => 44
-
 f_four_million = FibonacciSeries.new(4_000_000)
 f_four_million.sum_evens
 # => 4613732
-=end
+
 
