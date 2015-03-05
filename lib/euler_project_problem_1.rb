@@ -7,11 +7,11 @@ Find the sum of all the multiples of 3 or 5 below 1000.
 =end
 
 def sum_of_multiples(min,max)
-	natural_set = (min...max).to_a
-	multiples = natural_set.select { |n| (n % 3 == 0) or (n % 5 == 0) }
-	sum = multiples.reduce(&:+)
-	puts "Sum of natural numbers between #{min} and #{max} that are divisible by 3 or 5 is #{sum}"
-	sum
+  natural_set = (min...max).to_a
+  multiples = natural_set.select { |n| (n % 3 == 0) or (n % 5 == 0) }
+  sum = multiples.reduce(&:+)
+  puts "Sum of natural numbers between #{min} and #{max} that are divisible by 3 or 5 is #{sum}"
+  sum
 end
 
 # This is how I went about solving the puzzle:
